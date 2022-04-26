@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--该指令可以给标签原有属性绑定模型数据。这样模型数据发生变化，标签属性值也随之发生变化-->
+
+<div id="app">
+    <a v-bind:href="url">点击一下</a>
+<!--    v-bind可以省略-->
+    <a :href="url">点击一下</a>
+    <input v-model="url">
+</div>
+<script src="js/vue.js"></script>
+<script>
+    //new vue Object
+    new Vue({
+        el:"#app",
+        data(){
+            return{
+                username:"",
+                url:"https://www.baidu.com"
+            }
+        }
+    });
+</script>
+</body>
+</html>
